@@ -1,13 +1,193 @@
-body {
+/* Importing Google Fonts - Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.app {
+  background-image: linear-gradient(to right, #ada996, #f2f2f2, #dbdbdb);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.25rem;
+  width: 100%;
 }
+.App-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 42px;
+  color:black;
+  width: 100%;
+  max-width: 1200px;
+  padding: 1.25rem;
+  }
+
+  /* Search section styling */
+.search-bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 500px;
+  height: 50px;
+  transition: 0.3s ease;
+  
+  }
+
+.search-bar input {
+  width: 100%;
+  font-size: clamp(1.2rem, 1rem + 1vw, 1.6rem);
+  border-radius: 40px;
+  color:black;
+  background: transparent;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 1rem 3rem 1rem 1rem;
+  border: 3px solid black;
+  
+  }
+  
+.search-bar input::placeholder {
+  font-size: clamp(1.2rem, 1rem + 1vw, 1.6rem);
+  font-weight: 600;
+  color: black;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  }
+.search-bar input:hover,
+.search-bar input:focus {
+  background-color: rgba(130, 177, 255, 0.1) ;
+  border: 1px solid rgba(255, 255, 255, 0.5); 
+}
+
+.search-button {
+  position: absolute;
+  right: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  padding: .625rem;
+  border-radius: 50%;
+  cursor: pointer;
+  color: transparent;
+  background: transparent;
+  border: none;
+}
+
+.location-btn {
+  margin-top: .938rem;
+  padding: .313rem 1rem;
+  background-color: #0047ab;
+  color: #fff;
+  border: 1px solid #0047ab;
+  border-radius: 2px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.location-btn:hover {
+  background-color: rgba(4, 4, 184, 0.467)ab;
+  border: #000000;
+}
+
+.loading {
+  font-size: 1.125rem;
+  margin: 1.25rem 0;
+  color: #fff;
+}
+
+.error {
+  color: #95208a;
+  margin: .938rem 0;
+  padding: .625rem .938rem;
+  border-radius: 4px;
+  background-color: rgba(255, 107, 107, 0.1);
+  max-width: 400px;
+  text-align: center;
+}
+
+.error-help {
+  color: #eee;
+  margin-top: .5rem;
+  font-size: .875rem;
+}
+
+.location-error {
+  border-color: #95208A;
+  background-color: rgba(255, 179, 71, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .app {
+    padding: .938rem;
+  }
+  
+  .App-header {
+    font-size: calc(14px + 1.8vmin);
+    padding: .938rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .app {
+    padding: .625rem;
+  }
+  
+  .App-header {
+    font-size: calc(12px + 1.5vmin);
+    padding: .625rem;
+  }
+
+  @media (max-width: 1024px) {
+    .search-bar {
+      max-width: 400px;
+    }
+    
+    .search-bar input {
+      font-size: 1.4rem;
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .search-bar input,
+    .search-bar input::placeholder {
+      font-size: 1.2rem;
+    }
+    
+    .location-btn {
+      font-size: 0.9rem;
+      padding: 0.25rem 0.75rem;
+    }
+  }
+  
+  @media (max-width: 320px) {
+    .search-bar {
+      height: 40px;
+    }
+    
+    .search-bar input {
+      padding: 0.75rem 2.5rem 0.75rem 0.75rem;
+    }
+    
+    .search-button {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+
+
+
+

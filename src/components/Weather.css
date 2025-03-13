@@ -1,0 +1,302 @@
+/* Base container styling */
+
+.weather {
+  place-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 0 10px rgb(0, 0, 0, 0.2);
+  overflow: hidden;
+  padding: clamp(1rem, 5vw, 2.5rem);
+}
+
+.weather-error {
+  border-color: #F5E9F4;
+  background-color: rgba(130, 177, 255, 0.1);
+}
+
+/* Temperature and description styling */
+
+
+.weather-box {
+  text-align: center;
+}
+
+.weather-box .temperature {
+  position: relative;
+  display: inline-block;
+  margin: 1.875 auto;
+  background-color: rgba(255,255,255,0.1);
+  border-radius: 1rem;
+  padding: .938rem 1.563rem;
+  color: #000;
+  font-size: 6.25rem;
+  font-weight: 500;
+  text-shadow: 3px 6px rgba(0,0,0,0.2);
+}
+.temperature::after {
+  content: "°F";
+  font-weight: normal;
+  margin-left: .125rem;
+}
+.weather-box .description {
+  font-size: 1.6rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  margin-bottom: .938rem;
+  color: #000;
+}
+.description {
+  display: inline-block;
+  margin: 0px 0 0 10px;
+  font-size: 1.875rem;
+  color: #000;
+  text-transform: capitalize;
+  padding: 0px;
+}
+
+
+
+/* Location styling */
+#location-city {
+  font-size: 3.75rem;
+  font-weight: 800;
+  margin: 1.875rem 0 1.25rem 0;
+  text-align: center;
+  padding-top: 6.25rem;
+  padding-bottom: 4.688rem;
+  word-wrap: break-word;
+  max-width: 100%;
+  text-shadow: 3px 3px 0px rgba(0,0,0,0.2);
+}
+
+/* Weather details section */
+#weather-bottom {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  padding-top: 5.625rem;;
+  margin-top: .625rem;
+  width: 100%;
+}
+
+#weather-bottom h2 {
+  font-size: 2.625rem;
+  margin-bottom: 1.25rem;;
+  font-weight: bold;
+  text-align: left;
+  padding-bottom: 1.25rem;
+}
+
+#weather-bottom > div:last-child {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+  width: 100%;
+}
+
+#weather-bottom p {
+  display: flex;
+  align-items: center;
+  margin: .5rem 0;
+  font-size: 1.875rem;
+  padding-bottom: 1.875rem;
+  justify-content: left;
+  gap: .313px;
+}
+
+#dt img, #humidity img, #wind-speed img, #pressure img {
+  justify-content: center;
+  margin-right: .625rem;
+}
+
+
+
+/* Reset button styling */
+  button {
+  height: 50px;
+  width: 100px;
+  color: black;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 40px;
+  font-size: 1.125rem;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 0 auto;
+  outline: none;
+  border: none;
+}
+
+button:hover {
+  background-color: transparent;
+}
+
+
+
+/* Responsive media queries */
+/* Large tablets and desktops */
+@media (max-width: 1024px) {
+  .weather-app {
+    padding: 1.875;
+  }
+  
+  #search-term {
+    font-size: 3.125rem;
+    padding-top: 5rem;
+    padding-bottom: 3.75rem;
+  }
+  
+  #bottom-half {
+    padding-top: 5rem;
+  }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+  .weather-app {
+    padding: 1.563rem;
+  }
+  
+  #search-term {
+    font-size: 2.5rem;
+    padding-top: 3.75rem;
+    padding-bottom: 3.125rem;
+  }
+  
+  .temperature {
+    font-size: 2.5rem;
+  }
+  
+  .description {
+    font-size: 1.375rem;
+  }
+  
+  #bottom-half h2 {
+    font-size: 1.875rem;
+  }
+  
+  #bottom-half p {
+    font-size: 1.125rem;
+  }
+}
+
+/* Large smartphones */
+@media (max-width: 624px) {
+  .weather-app,
+  .search-section {
+    padding: 1.25rem;
+  }
+  
+  .search-bar input {
+    font-size: 1.3rem;
+  }
+  
+  .search-bar input::placeholder {
+    font-size: 1.2rem;
+  }
+  
+  #search-term {
+    font-size: 2rem;
+    padding-top: 3.15rem;
+    padding-bottom: 2.5rem;
+  }
+  
+  .temperature {
+    font-size: clamp(2rem, 8vw, 6.25rem);
+  }
+  
+  .description {
+    font-size: 1.25rem;
+    margin-left: .313rem;
+  }
+  
+  #bottom-half {
+    padding-top: 3.75rem;
+  }
+  
+  #bottom-half h2 {
+    font-size: 1.625rem;
+    margin-bottom: 1.25rem;
+  }
+  
+
+}
+
+/* Small smartphones */
+@media (max-width: 480px) {
+  .weather-app {
+    padding: .938rem;
+  }
+  
+  .search-bar {
+    height: 45px;
+  }
+  
+  .search-bar input {
+    font-size: 1.1rem;
+    padding: 0.8rem 2.5rem 0.8rem 0.8rem;
+  }
+  
+  .search-button {
+    width: 40px;
+    height: 40px;
+  }
+  
+  #search-term {
+    font-size: 28px;
+    padding-top: 2.5rem;
+    padding-bottom: 1.875rem;
+  }
+  
+  .temperature {
+    font-size: 2rem;
+  }
+  
+  .description {
+    font-size: 1.125rem;
+  }
+  
+  #bottom-half > div:last-child {
+    grid-template-columns: 1fr;
+    gap: .625rem;
+  }
+  
+  #bottom-half p {
+    font-size: 1rem;
+    padding-bottom: .938rem;
+  }
+  
+  #dt img, #humidity img, #wind-speed img, #pressure img {
+    width: 40px;
+    height: 40px;
+  }
+  
+  button {
+    height: 45px;
+    width: 90px;
+    font-size: .875rem;
+  }
+  
+}
+
+/* Very small smartphones */
+@media (max-width: 320px) {
+  #search-term {
+    font-size: 1.5rem;
+    padding-top: 1.875rem;
+    padding-bottom: 1.563rem;
+  }
+  
+  .temperature {
+    font-size: 1.75rem;
+  }
+  
+  #bottom-half h2 {
+    font-size: 1.375rem;
+  }
+}
