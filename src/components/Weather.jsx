@@ -46,7 +46,7 @@ const Weather = ({ data, resetData }) => {
             
             <p className='description'>{data.weather[0].description}</p>
             {/* icon example */}
-            <img src={iconUrl} alt='weather icon' />
+            <img src={iconUrl} alt='weather_icon' />
             </div>
            
           

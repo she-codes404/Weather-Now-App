@@ -6,9 +6,9 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
-  max-width: 600px;
-  margin: 0 auto;
-  box-shadow: 0 0 10px rgb(0, 0, 0, 0.2);
+  max-width: 700px;
+  margin: -5 auto;
+  box-shadow: 0 0 10px rgba(29, 28, 28, 0.1);
   overflow: hidden;
   padding: clamp(1rem, 5vw, 2.5rem);
 }
@@ -20,9 +20,10 @@
 
 /* Temperature and description styling */
 
-
 .weather-box {
   text-align: center;
+  margin-top: .5rem;
+
 }
 
 .weather-box .temperature {
@@ -43,7 +44,7 @@
   margin-left: .125rem;
 }
 .weather-box .description {
-  font-size: 1.6rem;
+  font-size: 1.7rem;
   font-weight: 500;
   text-transform: capitalize;
   margin-bottom: .938rem;
@@ -52,12 +53,16 @@
 .description {
   display: inline-block;
   margin: 0px 0 0 10px;
-  font-size: 1.875rem;
+  font-size: 2.75rem;
   color: #000;
   text-transform: capitalize;
   padding: 0px;
 }
 
+#weather_icon {
+  width: 1000px;
+  height: 120px;
+}
 
 
 /* Location styling */
@@ -76,23 +81,24 @@
 /* Weather details section */
 #weather-bottom {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  padding-top: 5.625rem;;
-  margin-top: .625rem;
+  padding-top: 6.625rem;;
+  margin-top: .725rem;
   width: 100%;
 }
 
 #weather-bottom h2 {
-  font-size: 2.625rem;
-  margin-bottom: 1.25rem;;
+  font-size: 2.525rem;
+  margin-bottom: 1.20rem;;
   font-weight: bold;
   text-align: left;
-  padding-bottom: 1.25rem;
+  padding-bottom: 1.50rem;
+  margin-left: 10px;
 }
 
 #weather-bottom > div:last-child {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1.25rem;
+  gap: 1.4rem;
   width: 100%;
 }
 
@@ -100,7 +106,7 @@
   display: flex;
   align-items: center;
   margin: .5rem 0;
-  font-size: 1.875rem;
+  font-size: 1.75rem;
   padding-bottom: 1.875rem;
   justify-content: left;
   gap: .313px;
@@ -108,7 +114,7 @@
 
 #dt img, #humidity img, #wind-speed img, #pressure img {
   justify-content: center;
-  margin-right: .625rem;
+  margin-right: .525rem;
 }
 
 
