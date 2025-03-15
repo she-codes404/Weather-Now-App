@@ -25,7 +25,7 @@ const Weather = ({ data, resetData }) => {
   }
 
     const backgroundImages = {
-      Clear: 'linear-gradient(to right, #005c97, #363795)',
+      Clear: 'linear-gradient(to right, #005c97,rgb(93, 95, 231))',
       Clouds: 'linear-gradient(to right, #b5b9ff, #2b2c49)',
       Rain: 'linear-gradient(to right, #fbc2eb, #a6c1ee)',
       Snow: 'linear-gradient(to right, #e6dada, #274046)',

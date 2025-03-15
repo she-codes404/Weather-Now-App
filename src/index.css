@@ -74,12 +74,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50px;
+  width: 60px;
   height: 50px;
   padding: .625rem;
   border-radius: 50%;
   cursor: pointer;
-  color: transparent;
+  color: #000000;
   background: transparent;
   border: none;
 }
@@ -108,13 +108,16 @@
 }
 
 .error {
+  font-size: 1.25rem;
   color: #95208a;
   margin: .938rem 0;
   padding: .625rem .938rem;
-  border-radius: 4px;
-  background-color: rgba(255, 107, 107, 0.1);
-  max-width: 400px;
+  border-radius: none;
+  max-width: 500px;
   text-align: center;
+  background-color: transparent;
+  border: none;
+  outline:none
 }
 
 .error-help {
@@ -125,7 +128,6 @@
 
 .location-error {
   border-color: #95208A;
-  background-color: rgba(255, 179, 71, 0.1);
 }
 
 /* Responsive adjustments */
